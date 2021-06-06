@@ -1,6 +1,10 @@
 # poke_api_vipy
  Avaliação do candidato Diego de Souza Castro pela empresa Vipy.
 
+
+![Teste](https://github.com/DiegoSCastro/poke_api_vipy/raw/main/output.gif)
+
+
 ## Getting Started
 O código está adaptado para o Flutter 2.2 null safety.
 
