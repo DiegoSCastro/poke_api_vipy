@@ -100,28 +100,31 @@ class PokemonDetailsScreen extends StatelessWidget {
                         height: 96,
                         width: 96,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 32),
-                        child: GridView.builder(
-                          physics: ScrollPhysics(),
-                          shrinkWrap: true,
-                          gridDelegate:
-                              SliverGridDelegateWithMaxCrossAxisExtent(
-                            maxCrossAxisExtent: size.width * 0.5,
-                            childAspectRatio: 3,
-                            crossAxisSpacing: 20,
-                            mainAxisSpacing: 20,
+                      Container(
+                        width: size.width,
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 32),
+                          child: GridView.builder(
+                            physics: ScrollPhysics(),
+                            shrinkWrap: true,
+                            gridDelegate:
+                                SliverGridDelegateWithMaxCrossAxisExtent(
+                              maxCrossAxisExtent: size.width * 0.5,
+                              childAspectRatio: 3,
+                              crossAxisSpacing: 20,
+                              mainAxisSpacing: 20,
+                            ),
+                            itemCount:
+                                pokemonDetailsController.pokemon!.types.length,
+                            itemBuilder: (context, index) {
+                              final pokemonType = pokemonDetailsController
+                                  .pokemon!.types[index];
+                              return TypeButton(
+                                type: pokemonType.type.name.capitalize(),
+                                color: getColor[pokemonType.type.name]!,
+                              );
+                            },
                           ),
-                          itemCount:
-                              pokemonDetailsController.pokemon!.types.length,
-                          itemBuilder: (context, index) {
-                            final pokemonType =
-                                pokemonDetailsController.pokemon!.types[index];
-                            return TypeButton(
-                              type: pokemonType.type.name.capitalize(),
-                              color: getColor[pokemonType.type.name]!,
-                            );
-                          },
                         ),
                       ),
                     ],

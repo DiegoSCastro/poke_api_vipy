@@ -31,17 +31,17 @@ no terminal:
 
 flutter pub run build_runner watch
 
-## Executar a aplicação
+## Executar a aplicação em mode de desenvolvimento
 
 Abrir o emulador junto ao editor de código ou conectar o dispositivo físico.
-Comando no terminal:
+user o comando no terminal:
 
 flutter run
 
-ou
+## Executar a aplicação como usuário
 
 Instalar o arquivo Apk em um dispositivo android:
-"link para download"
+https://drive.google.com/file/d/1jjkCO8aU8QXpFhHwSAaspkBSY8hFazoe/view
 
 
 

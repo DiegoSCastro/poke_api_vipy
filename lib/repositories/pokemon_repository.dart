@@ -8,26 +8,38 @@ class PokemonRepository {
   static const baseUrl = 'https://pokeapi.co/api/v2/pokemon';
 
   Future<ApiResult> getApiResult() async {
-    var response = await http.get(Uri.parse(baseUrl));
+    try {
+      var response = await http.get(Uri.parse(baseUrl));
 
-    var result = ApiResult.fromMap(json.decode(response.body));
+      var result = ApiResult.fromMap(json.decode(response.body));
 
-    return result;
+      return result;
+    } catch (e) {
+      return Future.error('Falha ao carregar pokemons');
+    }
   }
 
   Future<ApiResult> getMorePokemons(String nextUrl) async {
-    var response = await http.get(Uri.parse(nextUrl));
+    try {
+      var response = await http.get(Uri.parse(nextUrl));
 
-    var result = ApiResult.fromMap(json.decode(response.body));
+      var result = ApiResult.fromMap(json.decode(response.body));
 
-    return result;
+      return result;
+    } catch (e) {
+      return Future.error('Falha ao carregar pokemons');
+    }
   }
 
   Future<Pokemon> getPokemon(String pokemonUrl) async {
-    var response = await http.get(Uri.parse(pokemonUrl));
+    try {
+      var response = await http.get(Uri.parse(pokemonUrl));
 
-    var pokemon = Pokemon.fromJson(json.decode(response.body));
+      var pokemon = Pokemon.fromJson(json.decode(response.body));
 
-    return pokemon;
+      return pokemon;
+    } catch (e) {
+      return Future.error('Falha ao carregar mais pokemons');
+    }
   }
 }

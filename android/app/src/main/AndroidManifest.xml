@@ -1,8 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.poke_api_vipy">
+    <uses-permission android:name="android.permission.INTERNET" />
    <application
+
         android:label="poke_api_vipy"
         android:icon="@mipmap/ic_launcher">
+
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
