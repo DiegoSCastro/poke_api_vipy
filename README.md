@@ -31,10 +31,10 @@ no terminal:
 
 flutter pub run build_runner watch
 
-## Executar a aplicação em mode de desenvolvimento
+## Executar a aplicação em modo de desenvolvimento
 
-Abrir o emulador junto ao editor de código ou conectar o dispositivo físico.
-user o comando no terminal:
+Abrir o emulador junto ao editor de código ou conectar um dispositivo físico.
+usar o comando no terminal:
 
 flutter run
 
