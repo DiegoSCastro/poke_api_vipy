@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:poke_api_vipy/models/pokemon_item.dart';
-import 'package:poke_api_vipy/screens/pokemon_details/pokemon_details_screen.dart';
-import 'package:poke_api_vipy/settings/app_colors.dart';
-import 'package:poke_api_vipy/settings/app_extensions.dart';
+
+import '../../../models/pokemon_item.dart';
+import '../../../settings/app_colors.dart';
+import '../../../settings/app_extensions.dart';
+import '../../pokemon_details/pokemon_details_screen.dart';
 
 class PokemonGridItem extends StatelessWidget {
   final PokemonItem pokemonItem;

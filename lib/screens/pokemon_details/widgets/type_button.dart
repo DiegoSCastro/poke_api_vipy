@@ -12,12 +12,10 @@ class TypeButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Container(
       height: 80,
       alignment: Alignment.center,
       padding: EdgeInsets.symmetric(vertical: 16),
-      // width: size.width * 0.8,
       decoration: BoxDecoration(
         color: color,
         borderRadius: BorderRadius.circular(16),

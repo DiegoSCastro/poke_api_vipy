@@ -52,7 +52,7 @@ mixin _$PokemonDetailsController on _PokemonDetailsController, Store {
       ActionController(name: '_PokemonDetailsController');
 
   @override
-  dynamic setLoading(bool value) {
+  bool setLoading(bool value) {
     final _$actionInfo = _$_PokemonDetailsControllerActionController
         .startAction(name: '_PokemonDetailsController.setLoading');
     try {
@@ -63,7 +63,7 @@ mixin _$PokemonDetailsController on _PokemonDetailsController, Store {
   }
 
   @override
-  dynamic setPokemon(Pokemon value) {
+  Pokemon setPokemon(Pokemon value) {
     final _$actionInfo = _$_PokemonDetailsControllerActionController
         .startAction(name: '_PokemonDetailsController.setPokemon');
     try {

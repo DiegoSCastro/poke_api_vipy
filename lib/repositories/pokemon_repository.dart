@@ -1,8 +1,9 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-import 'package:poke_api_vipy/models/api_result.dart';
-import 'package:poke_api_vipy/models/pokemon.dart';
+
+import '../models/api_result.dart';
+import '../models/pokemon.dart';
 
 class PokemonRepository {
   static const baseUrl = 'https://pokeapi.co/api/v2/pokemon';

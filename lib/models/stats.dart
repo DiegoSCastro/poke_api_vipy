@@ -1,4 +1,4 @@
-import 'package:poke_api_vipy/models/stat.dart';
+import 'stat.dart';
 
 class Stats {
   int baseStat;

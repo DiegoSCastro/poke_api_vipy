@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:poke_api_vipy/screens/home/home_screen.dart';
+
+import 'screens/home/home_screen.dart';
 
 void main() async {
   runApp(MyApp());

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:poke_api_vipy/settings/app_colors.dart';
+
+import '../../../settings/app_colors.dart';
 
 class HomeButton extends StatelessWidget {
   final VoidCallback onTap;

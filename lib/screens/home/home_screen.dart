@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:poke_api_vipy/screens/home/widgets/home_button.dart';
-import 'package:poke_api_vipy/screens/pokemon_grid/pokemon_grid_screen.dart';
-import 'package:poke_api_vipy/settings/app_assets.dart';
-import 'package:poke_api_vipy/settings/app_colors.dart';
+
+import '../../settings/app_assets.dart';
+import '../../settings/app_colors.dart';
+import '../pokemon_grid/pokemon_grid_screen.dart';
+import 'widgets/home_button.dart';
 
 class HomeScreen extends StatelessWidget {
   @override

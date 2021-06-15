@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:poke_api_vipy/models/pokemon_item.dart';
-import 'package:poke_api_vipy/screens/pokemon_details/pokemon_details_controller.dart';
-import 'package:poke_api_vipy/screens/pokemon_details/widgets/stats_button.dart';
-import 'package:poke_api_vipy/screens/pokemon_details/widgets/type_button.dart';
-import 'package:poke_api_vipy/settings/app_colors.dart';
-import 'package:poke_api_vipy/settings/app_extensions.dart';
+
+import '../../models/pokemon_item.dart';
+import '../../settings/app_colors.dart';
+import '../../settings/app_extensions.dart';
+import 'pokemon_details_controller.dart';
+import 'widgets/stats_button.dart';
+import 'widgets/type_button.dart';
 
 class PokemonDetailsScreen extends StatelessWidget {
   final PokemonItem pokemonItem;
@@ -42,10 +43,11 @@ class PokemonDetailsScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Observer(builder: (_) {
-          if (pokemonDetailsController.loading)
+          if (pokemonDetailsController.loading) {
             return Center(
               child: CircularProgressIndicator(),
             );
+          }
           return SingleChildScrollView(
             child: Column(
               children: [
@@ -145,9 +147,9 @@ class PokemonDetailsScreen extends StatelessWidget {
                               .toString()),
                       StatsButton(
                           title: 'Altura',
-                          value: (pokemonDetailsController.pokemon!.height * 10)
-                                  .toString() +
-                              'cm'),
+                          // ignore: lines_longer_than_80_chars
+                          value:
+                              '${pokemonDetailsController.pokemon!.height * 10}cm'),
                       StatsButton(
                           title: pokemonDetailsController
                               .pokemon!.stats[1].stat.name
@@ -157,9 +159,9 @@ class PokemonDetailsScreen extends StatelessWidget {
                               .toString()),
                       StatsButton(
                           title: 'Peso',
-                          value: (pokemonDetailsController.pokemon!.weight / 10)
-                                  .toString() +
-                              'Kg'),
+                          // ignore: lines_longer_than_80_chars
+                          value:
+                              '${pokemonDetailsController.pokemon!.weight / 10}Kg'),
                       StatsButton(
                           title: pokemonDetailsController
                               .pokemon!.stats[2].stat.name

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:poke_api_vipy/screens/home/widgets/home_button.dart';
-import 'package:poke_api_vipy/screens/pokemon_grid/pokemon_grid_controller.dart';
-import 'package:poke_api_vipy/screens/pokemon_grid/widgets/pokemon_grid_item.dart';
-import 'package:poke_api_vipy/settings/app_assets.dart';
-import 'package:poke_api_vipy/settings/app_colors.dart';
+
+import '../../settings/app_assets.dart';
+import '../../settings/app_colors.dart';
+import '../home/widgets/home_button.dart';
+import 'pokemon_grid_controller.dart';
+import 'widgets/pokemon_grid_item.dart';
 
 class PokemonGridScreen extends StatelessWidget {
   final PokemonGridController pokemonGridController = PokemonGridController();
@@ -30,10 +31,11 @@ class PokemonGridScreen extends StatelessWidget {
                   ),
                 ),
                 Observer(builder: (_) {
-                  if (pokemonGridController.loading)
+                  if (pokemonGridController.loading) {
                     return Center(
                       child: CircularProgressIndicator(),
                     );
+                  }
                   return Container(
                     padding: EdgeInsets.symmetric(horizontal: 20),
                     child: GridView.builder(

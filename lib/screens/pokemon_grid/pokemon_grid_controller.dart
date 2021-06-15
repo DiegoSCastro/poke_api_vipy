@@ -1,7 +1,8 @@
 import 'package:mobx/mobx.dart';
-import 'package:poke_api_vipy/models/api_result.dart';
-import 'package:poke_api_vipy/models/pokemon_item.dart';
-import 'package:poke_api_vipy/repositories/pokemon_repository.dart';
+
+import '../../models/api_result.dart';
+import '../../models/pokemon_item.dart';
+import '../../repositories/pokemon_repository.dart';
 
 part 'pokemon_grid_controller.g.dart';
 
